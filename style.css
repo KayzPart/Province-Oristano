@@ -85,6 +85,7 @@ figure > .logo{
 }
 a{
     text-decoration: none;
+
 }
 nav#main-nav > ul > li{
     float: left;
@@ -94,9 +95,26 @@ nav#main-nav > ul > li > a{
     font-size:  24px;
     -webkit-text-fill-color: #fff;
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 10px #FFFFFF, 1px 1px 3px rgba(0, 0, 0, 0.63);
     font-family: "Adamina";
 }
-
+nav#main-nav > ul > li:hover > a{
+    background-color: rgba(255, 255, 255, 0.473);
+}
+.slogan{
+    position: relative;
+}
+.slogan::before{
+    content: "La dolce vità et le far niente !";
+    position: absolute;
+    top: -40px;
+    text-shadow: 1px 0px 3px #000000;
+    -webkit-box-shadow: -3px -2px 15px -2px #000000; 
+    box-shadow: -3px -2px 15px -2px #000000;
+    font-size: 2.5rem;
+    font-family: "Adamina";
+    color: #fff;
+}
 
 
 /* Media Querry */
@@ -171,6 +189,10 @@ nav#main-nav > ul > li > a{
         transform: rotate(-45deg);
         top: 0;
     }
+    .slogan::before{
+        font-size: 2em;
+        top: -32px;
+    }
 }
 @media screen and (max-width: 460px) {
     header{
@@ -179,6 +201,10 @@ nav#main-nav > ul > li > a{
     figure > .logo{
         height: 50px;
         width: 50px;
+    }
+    .slogan::before{
+        font-size: 1.5em;
+        top: -23px;
     }
 }
 @media screen and (max-width: 350px) {
@@ -190,5 +216,9 @@ nav#main-nav > ul > li > a{
     }
     nav#main-nav > ul > li{
         padding: 5px;
+    }
+    .slogan::before{
+        font-size: 1em;
+        top: -16px;
     }
 }
