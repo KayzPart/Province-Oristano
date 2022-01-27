@@ -54,8 +54,10 @@ table {
 }
 
 /* Général */
+
+/* Header */
 .row-limit-size{
-    max-width: 1600px;
+    max-width: 2000px;
     width: 100%;
 }
 .show{
@@ -65,6 +67,10 @@ table {
     display: flex;
     justify-content: space-between;
 }
+.flex-around{
+    display: flex;
+    justify-content: space-around;
+}
 header{
     background-image: url(./IMG/img-ame.png);
     background-repeat: no-repeat;
@@ -72,7 +78,7 @@ header{
     background-position: center center; 
     background-size: 100%;
 }
-figure > .logo{
+figure > a > .logo{
     width: 127px;
     height: 127px;
 }
@@ -85,7 +91,6 @@ figure > .logo{
 }
 a{
     text-decoration: none;
-
 }
 nav#main-nav > ul > li{
     float: left;
@@ -101,6 +106,8 @@ nav#main-nav > ul > li > a{
 nav#main-nav > ul > li:hover > a{
     background-color: rgba(255, 255, 255, 0.473);
 }
+
+/* Slogan */
 .slogan{
     position: relative;
 }
@@ -109,25 +116,395 @@ nav#main-nav > ul > li:hover > a{
     position: absolute;
     top: -40px;
     text-shadow: 1px 0px 3px #000000;
-    -webkit-box-shadow: -3px -2px 15px -2px #000000; 
-    box-shadow: -3px -2px 15px -2px #000000;
+    /* box-shadow: -3px -2px 15px -2px #000000; */
     font-size: 2.5rem;
     font-family: "Adamina";
     color: #fff;
 }
 
+/* Accueil */
+.txt-accueil > h1{
+    text-align: center;
+    padding: 20px 0;
+    font-size: 32px;
+    height: auto;
+}
+.txt-accueil, .cercles{
+    padding: 20px;
+}
+.txt-accueil > p{
+    padding: 15px 0;
+    line-height: 20px;
+}
+/* Cercle chiffres */
+.cercles{
+    position: relative;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+#cercle1, #cercle2, #cercle3{
+    position: absolute;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.6); 
+    box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.6);
+    margin: 20px;
+}
+#cercle1::before, #cercle2::before, #cercle3::before{
+    position: absolute;
+    font-size: 14px;
+}
+#cercle1::after, #cercle2::after, #cercle3::after{
+    position: absolute;
+}
+#cercle1{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+#cercle1::before{
+    content: "87";
+    top: 17px;
+    left: 17px;
+}
+#cercle1::after{
+    content: "Communes";
+    top: 15px;
+    right: -100px;
+}
+#cercle2{
+    width: 65px;
+    height: 65px;
+    border-radius: 50px;
+    left: 30%;
+}
+#cercle2::before{
+    content: "157 707";
+    top: 27px;
+    left: 10px;
+}
+#cercle2::after{
+    content: "C’est le nombre d’habitants qu’elle compte aujourd’hui";
+    right: -390px;
+    top: 25px;
+}
+#cercle3{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    left: 70%;
+    /* top: 0; */
+}
+#cercle3::before{
+    content: "2 996 km²";
+    top: 35px;
+    right: 10px;
+}
+#cercle3::after{
+    content: "Sa superficie total à l’heure actuelle";
+    right: -260px;
+    top: 30px;
+}
+/* Div content-hisoire */
+.content-histoire{
+    position: relative;
+    left: 10%;
+    height: 300px;
+    width: 800px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.6);
+
+}
+.content-histoire > h2{
+    font-size: 18px;
+    padding: 10px 0;
+}
+.content-histoire > .histoire-first-cercle{
+    display: flex;
+    align-items: center;
+}
+.histoire-first-cercle > #cercle4, .histoire-second-cercle > #cercle5{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.5);
+    position: relative;
+}
+#cercle5{
+    left: 45%;
+}
+.histoire-first-cercle > #cercle4::after{
+    content: "1848";
+    position: absolute;
+    top: 18px;
+    left: 8px;
+}
+.content-histoire > p, .histoire-second-cercle p{
+    text-align: center;
+}
+.histoire-second-cercle > #cercle5::after{
+    content: "2001";
+    position: absolute;
+    top: 18px;
+    left: 8px;
+
+}
+
+/* Div climat */
+.climat{
+    width: 610px;
+    height: 150px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: -3px -4px 4px 0px rgba(0,0,0,0.42);
+    position: relative;
+    left: 55%;
+    top: -40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.climat > figure > img{
+    width: 50px;
+    height: auto;
+    transform: rotate(25deg);
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+/* Maps */
+#maps {
+    text-align: center;
+    padding: 5px 0;
+    
+}
+#maps > iframe{
+    border-radius: 10px;
+}
+
+/* Img Accueil */
+.img-acc, .overlay-acc, figure > figcaption{
+    border-radius: 10px;
+}
+.figure-content{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+.figure-box{
+    position: relative;
+}
+.figure-box  >a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    color: #fff;
+    text-shadow: 2px 1px 3px rgb(0, 0, 0);
+    font-size: 25px;
+}
+.figure-box > a:hover{
+    background-color: rgba(33, 33, 33, 0.3);
+    border-radius: 10px; 
+}
+.figure-box  >a > h2{
+    text-align: center;
+}
+.overlay-acc{
+    height: 230px;
+    object-fit: contain;
+}
+
+
+/* Footer */
+footer{
+    background-color: #DBB276;
+    margin-top: 50px;
+}
+/* Modal Mentions légales */
+#modal{
+    position: absolute;
+    left: 35%;
+    bottom: 0;
+    max-width: 1100px;
+    width: 100%;
+    /* height: 100%; */
+    z-index: 9999;
+    text-align: center;
+    display: none;
+}
+#modal div{
+    max-width: 1000px;
+    width: 100%;
+    /* height: auto; */
+    margin: 0 auto;
+    background-color: #c0825ce3;
+    position: absolute;
+    left: 15%;
+    top: -80px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+#modal > div > h2{
+    font-weight: 700;
+}
+#modal > div > p >a{
+    color: khaki;
+}
+#close-ML{
+    color: rgb(156, 63, 63);
+    font-weight: 700;
+}
+#modal > div > .p-modal{
+    padding-bottom: 10px;
+}
+#ml-copyright{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 45%;
+}
+#open-ML{
+    color: black;
+    font-weight: 700;
+}
+#open-ML:hover{
+    color: brown;
+}
+.footer-prest{
+    position: relative;
+}
 
 /* Media Querry */
+@media screen and (max-width: 1535px){
+    .overlay-acc{
+        height: 200px;
+    }
+    .figure-content{
+        max-width: 1200px;
+        padding: 10px;
+    }
+    .content-histoire{
+        position: inherit;
+    }
+}
+@media screen and (max-width: 1340px){
+    #cercle1{
+        left: 0;
+    }
+    #cercle2{
+        left: 25%;
+    }
+    #cercle3{
+        left: 70%;
+    }
+    .content-histoire{
+        margin: 0 auto;
+    }
+    .climat{
+        left: 30%;
+        top: -20px;
+    }
+}
+@media screen and (max-width: 1280px){
+    .overlay-acc{
+        height: 180px;
+    }
+    .figure-content{
+        max-width: 1100px;
+    }
+}
+@media screen and (max-width: 1200px ){
+    #cercle1{
+        left: 0;
+    }
+    #cercle2{
+        left: 45%;
+    }
+    #cercle3{
+        bottom: -40px;
+        left: 15%;
+    }
+}
+@media screen and (max-width: 1155px) {
+    .figure-content{
+        flex-direction: column;
+        max-width: 610px;
+    }
+    .overlay-acc{
+        height: auto;
+        padding-bottom: 5px;
+    }
+    .figure-box > a{
+        max-width: 610px;
+    }
+    .figure-box > a > h2{
+        text-align: center;
+    } 
+}
 @media screen and (max-width: 1100px) {
     nav#main-nav > ul > li > a{
         font-size: 20px;
+    }
+    #modal > div{
+        width: auto;
+        top: 400px;
+    }
+    #ml-copyright{
+        left: 40%;
+    }
+}
+@media screen and (max-width: 940px){
+    .content-histoire{
+        max-width: 600px;
+        width: 100%;
+    }
+    .cercles{
+        max-width: 600px;
+    }
+}
+@media screen and (max-width: 900px){
+    #cercle1{
+        top: 0;
+    }
+    #cercle2{
+        top: 0;
+        left: 30%;
+    }
+    #cercle3{
+        left: 5%;
+    }
+    #maps > iframe {
+        width: 600px;
+    }
+    #modal > div {
+        max-width: 600px;
+        width: 100%;
+        top: 990px;
+    }
+    .climat{
+        left: inherit;
     }
 }
 @media screen and (max-width: 785px){
     header{
         height: 140px;
     }
-    figure > .logo{
+    figure > a > .logo{
         width: 80px;
         height: 80px;
     }
@@ -193,12 +570,157 @@ nav#main-nav > ul > li:hover > a{
         font-size: 2em;
         top: -32px;
     }
+    .cercles{
+        height: 200px;
+    }
+    #cercle1{
+        left: 30%;
+    }
+    #cercle2{
+        top: 30%;
+        left: 5%;
+    }
+    #cercle3{
+        left: 20%;
+        bottom: -20px;
+    }
+    .content-histoire{
+        max-width: 500px;
+        width: 100%;
+    }
+    .climat{
+        top: 5px;
+        left: 0;
+        max-width: 500px;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 680px){
+    .content-histoire, .climat{
+        margin: 0 auto;
+    }
+    .figure-content, .figure-box > a{
+        max-width: 510px;
+    }
+    .overlay-acc{
+        height: 335px;
+        width: 100%;
+        object-fit: cover;
+    }
+    #modal > div {
+        max-width: 600px;
+        width: 100%;
+        top: 990px;
+    }
+}
+@media screen and (max-width: 640px ) {
+    #maps > iframe{
+        width: 510px;
+    }
+    #modal > div {
+        max-width: 450px;
+        width: 100%;
+        top: 700px;
+    }
+    #ml-copyright{
+        left: 35%;
+    }
+}
+@media screen and (max-width: 590px){
+    .content-histoire{
+        padding: 10px;
+        box-sizing: content-box;
+        height: 100%;
+        width: 100%;
+    }
+    .txt-accueil{
+        padding: 0;
+    }
+    .txt-accueil > h1{
+        font-size: 22px;
+    }
+    .figure-content, .figure-box > a, #maps > iframe{
+        max-width: 500px;
+    }
+    #modal > div{
+        top: 700px;
+    }
+}
+@media screen and (max-width: 550px){
+    .content-histoire, .climat, .figure-content, .figure-box > a, #maps > iframe{
+        max-width: 450px;
+    }
+    .histoire-first-cercle > #cercle4, #cercle5{
+        margin: 5px;
+    }
+}
+@media screen and (max-width: 510px){
+    #cercle1, #cercle2, #cercle3{
+        margin: 5px;
+    }
+    #cercle1{
+        height: 30px;
+        width: 30px;
+        left: 0;
+    }
+    #cercle1::before{
+        left: 9px;
+        top: 10px;
+    }
+    #cercle1::after{
+        left: 35px;
+        top: 10px;
+    }
+    #cercle2{
+        height: 55px;
+        width: 55px;
+        left: 5px;
+    }
+    #cercle2::before{
+        left: 5px;
+        top: 23px;
+    }
+    #cercle2::after{
+        left: 60px;
+        top: 23px;
+    }
+    #cercle3{
+        width: 64px;
+        height: 64px;
+        left: 10px;
+        top: 65%;
+    }
+    #cercle3::before{
+        left: 4px;
+        top: 25px;
+        right: 0;
+    }
+    #cercle3::after{
+        left: 70px;
+        top: 25px;
+    }
+    header{
+        background-position: inherit;
+    }
+}
+@media screen and (max-width: 480px){
+    .content-histoire, .climat, .figure-content, .figure-box > a, #maps > iframe{
+        max-width: 400px;
+    }
+    .content-histoire > .histoire-first-cercle{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .climat{
+        padding: 0 10px;
+    }
 }
 @media screen and (max-width: 460px) {
     header{
         height: 100px;
     }
-    figure > .logo{
+    figure > a > .logo{
         height: 50px;
         width: 50px;
     }
@@ -206,10 +728,60 @@ nav#main-nav > ul > li:hover > a{
         font-size: 1.5em;
         top: -23px;
     }
+    
+    .climat > figure {
+        display: none;
+    }
+    .content-histoire, .climat, .figure-content, .figure-box > a, #maps > iframe{
+        max-width: 350px;
+        width: 100%;
+    }
+    #ml-copyright{
+        top: 10px;
+        left: 32.5%;
+        font-size: 12px;
+    }
+    #modal > div {
+        display: none;
+    }
+}
+@media screen and (max-width: 440px) {
+    #cercle1::after, #cercle2::after, #cercle3::after{
+        font-size: 14px;
+    }
+    #cercle3, #cercle2{
+        left: 0;
+    }
+    .cercles{
+        padding: 0;
+    }
+    .txt-accueil > h1{
+        font-size: 18px;
+    }
+    #maps > iframe, .figure-content, .figure-box > a{
+        width: 350px;
+    }
+    #cercle5{
+        left: 37%;
+    
+}
+@media screen and (max-width: 385px){
+    #cercle1::after, #cercle2::after, #cercle3::after{
+        font-size: 12px;
+    }
+    .content-histoire, .climat{
+        max-width: 350px;
+    }
+    #maps > iframe{
+        width: 350px;
+    }
+    #cercle5{
+        left: 37%;
+    }
 }
 @media screen and (max-width: 350px) {
     header, nav#main-nav{
-        height: 100px;
+        height: 110px;
     }
     #burger-menu, #burger-menu::before, #burger-menu::after{
         width: 25px;
@@ -219,6 +791,15 @@ nav#main-nav > ul > li:hover > a{
     }
     .slogan::before{
         font-size: 1em;
-        top: -16px;
+        top: -20px;
+    }
+    #cercle5{
+        left: 35%;
+    }
+    #cercle1::after, #cercle2::after, #cercle3::after{
+        font-size: 11px;
+    }
+    .content-histoire, .climat, .figure-content, .figure-box > a, #maps > iframe{
+        max-width: 290px;
     }
 }
