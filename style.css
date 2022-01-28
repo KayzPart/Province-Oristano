@@ -332,7 +332,7 @@ nav#main-nav > ul > li:hover > a{
 /* Footer */
 footer{
     background-color: #DBB276;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 /* Modal Mentions légales */
 #modal{
@@ -397,7 +397,8 @@ footer{
     text-align: center;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    align-items: center;
+    padding: 20px 20px 0 20px;
     font-size: 1.5rem;
     line-height: 26px;
 }
@@ -410,6 +411,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 20px 0 40px 0;
 }
 .boxs > .figure-box > .box{
     padding: 20px;
@@ -427,9 +429,9 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    font-size: 1.1rem;
 }
-/* Marchész et foires */
+/* Marchés et foires */
 .blocs{
     display: flex;
     flex-wrap: wrap;
@@ -442,13 +444,80 @@ footer{
     object-fit: cover;
 }
 .row-limit-size > .bloc-content{
-    height: 600px;
+    height: 500px;
     width: 300px;
     background-color: #fff;
     box-shadow: 5px 0px 16px -3px rgba(0,0,0,0.77);
 }
+.bloc-content > .bloc-content-desc > .bloc-title > h3{
+    color: #876445;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 0;
+}
+.bloc-content > .bloc-content-desc > .desc-p-content > p{
+    color: #C08059;
+    padding: 10px 5px;
+    text-align: center;
+}
 
-
+/* Actualités */
+/* .main-content-atcs{
+    display: flex;
+    flex-wrap: wrap;
+} */
+.row-limit-size > .main-content-acts{
+    display: flex;
+    flex-wrap: wrap;
+    /* align-self: center; */
+    padding: 20px 0;
+}
+.row-limit-size > .main-content-acts > .content-act{
+    width: 80%;
+    height: 150px;
+    background-color: #fff;
+    box-shadow: 5px 0px 16px -3px rgba(0,0,0,0.77);
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.row-limit-size > .main-content-acts > .content-act > figure > img{
+    width: 400px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 5px 0px 16px -3px rgba(46, 42, 42, 0.77);
+}
+.row-limit-size > .main-content-acts > .content-act {
+    display: flex;
+    
+}
+.row-limit-size > .main-content-acts > .content-act > .txt-act{
+    padding: 10px 10px 10px 30px;
+    /* width: 50%; */
+    box-sizing: content-box;
+    width: 50%;
+}
+.row-limit-size > .main-content-acts > .content-act > .txt-act > span{
+    color: #876445;
+    font-size: 1.8rem;
+}
+.row-limit-size > .main-content-acts > .content-act > .txt-act > p{
+    font-size: 1.2rem;
+    padding-top: 10px;
+    color: #C08059;
+    line-height: 35px;
+}
+.row-limit-size > .main-content-acts > .content-act  > a{
+    display: block;
+    height: 30px;
+    align-self: flex-end;
+    color: #876445;
+    font-weight: 700;
+    font-style: italic;
+}
 
 
 
@@ -502,6 +571,20 @@ footer{
         bottom: -40px;
         left: 15%;
     }
+    .row-limit-size > .bloc-content{
+        height: 450px;
+        width: 500px;
+        background-color: #fff;
+        box-shadow: 5px 0px 16px -3px rgba(0,0,0,0.77);
+        margin: 20px 0;
+    }
+    .row-limit-size > .bloc-content > figure > img{
+        width: 500px;
+        height: 300px;
+    }
+    .row-limit-size > .main-content-acts > .content-act > figure > img{
+        width: 300px;
+    }
 }
 @media screen and (max-width: 1155px) {
     .figure-content{
@@ -530,6 +613,19 @@ footer{
     #ml-copyright{
         left: 40%;
     }
+    .row-limit-size > .bloc-content{
+        height: 450px;
+        width: 400px;
+        background-color: #fff;
+        margin: 20px 0;
+    }
+    .row-limit-size > .bloc-content > figure > img{
+        width: 400px;
+        height: 300px;
+    }
+    .row-limit-size > .main-content-acts > .content-act > figure > img{
+        width: 250px;
+    }
 }
 @media screen and (max-width: 1040px) {
     .box > img{
@@ -543,6 +639,9 @@ footer{
         position: absolute;
         bottom: 0;
     }
+    .row-limit-size > .main-content-acts > .content-act > .txt-act > p {
+        font-size: 16px;
+    }
 }
 @media screen and (max-width: 940px){
     .content-histoire{
@@ -551,6 +650,24 @@ footer{
     }
     .cercles{
         max-width: 600px;
+    }
+}
+@media screen and (max-width: 920px){
+    .row-limit-size > .main-content-acts > .content-act{
+        flex-direction: column;
+        align-items: center;
+        height: inherit;
+        width: 80%;
+    }
+    .row-limit-size > .main-content-acts > .content-act > figure > img{
+        width: inherit;
+        height: inherit;
+    }
+    .row-limit-size > .main-content-acts > .content-act > .txt-act{
+        text-align: center;
+    }
+    .row-limit-size > .main-content-acts > .content-act > a{
+        align-self: inherit;
     }
 }
 @media screen and (max-width: 900px){
@@ -574,6 +691,30 @@ footer{
     }
     .climat{
         left: inherit;
+    }
+}
+@media screen and (max-width: 865px) {
+    .row-limit-size > .bloc-content{
+        height: 450px;
+        width: 99%;
+        background-color: #fff;
+        margin: 20px 0;
+    }
+    .row-limit-size > .bloc-content > figure > img{
+        width: 100%;
+        height: 300px;
+    }
+    .row-limit-size > .main-content-acts > .content-act > figure > img{
+        width: 600px;
+    }
+    .row-limit-size > .main-content-acts > .content-act{
+        width: 80%;
+    }
+    
+}
+@media screen and (max-width: 850px){
+    .row-limit-size > .main-content-acts > .content-act > .txt-act > p{
+        font-size: 15px;
     }
 }
 @media screen and (max-width: 830px) {
@@ -688,6 +829,20 @@ footer{
     .boxs > .figure-box > .box > a >.title-lieu{
         width: 600px;
     }
+    .row-limit-size > .main-content-acts > .content-act > figure > img{
+        width: 550px;
+    }
+    .row-limit-size > .main-content-acts > .content-act > .txt-act > p{
+        line-height: 25px;
+    }
+    
+}
+@media screen and (max-width: 720px) {
+    .row-limit-size > .main-content-acts > .content-act > figure > img{
+        width: 500px;
+    } .row-limit-size > .main-content-acts > .content-act > .txt-act{
+        width: 100%;
+    }
 }
 @media screen and (max-width: 680px){
     .content-histoire, .climat{
@@ -713,6 +868,11 @@ footer{
     }
     .boxs > .figure-box > .box > a >.title-lieu{
         width: 500px;
+    }
+}
+@media screen and (max-width: 660px){
+    .row-limit-size > .main-content-acts > .content-act > figure > img{
+        width: 450px;
     }
 }
 @media screen and (max-width: 640px ) {
@@ -755,6 +915,12 @@ footer{
     .boxs > .figure-box > .box > a >.title-lieu{
         width: 500px;
     }
+    .row-limit-size > .main-content-acts > .content-act > figure > img{
+        width: 400px;
+    }
+    .row-limit-size > .main-content-acts > .content-act{
+        width: 75%;
+    }
 }
 @media screen and (max-width: 550px){
     .content-histoire, .climat, .figure-content, .figure-box > a, #maps > iframe{
@@ -770,6 +936,12 @@ footer{
     }
     .boxs > .figure-box > .box > a >.title-lieu{
         width: 400px;
+    }
+    .row-limit-size > .main-content-acts > .content-act > figure > img{
+        width: 300px;
+    }
+    .row-limit-size > .main-content-acts > .content-act{
+        width: 65%;
     }
 }
 @media screen and (max-width: 510px){
@@ -862,6 +1034,18 @@ footer{
     #modal > div {
         display: none;
     }
+    .row-limit-size > .main-content-acts > .content-act > figure > img{
+        width: 250px;
+    }
+    .row-limit-size > .main-content-acts > .content-act{
+        width: 60%;
+    }
+    .row-limit-size > .main-content-acts > .content-act > .txt-act > span{
+        font-size: 20px;
+    }
+    .row-limit-size > .main-content-acts > .content-act > .txt-act > p{
+        font-size: 12px;
+    }
 }
 @media screen and (max-width: 440px) {
     #cercle1::after, #cercle2::after, #cercle3::after{
@@ -890,8 +1074,11 @@ footer{
     .boxs > .figure-box > .box > a >.title-lieu{
         width: 300px;
     }
-    
-    
+}
+@media screen and (max-width: 420px){
+    .row-limit-size > .main-content-acts > .content-act > figure > img{
+        width: 230px;
+    }
 }
 @media screen and (max-width: 385px){
     #cercle1::after, #cercle2::after, #cercle3::after{
@@ -905,6 +1092,9 @@ footer{
     }
     #cercle5{
         left: 37%;
+    }
+    .row-limit-size > .main-content-acts > .content-act > figure > img{
+        width: 200px;
     }
 }
 @media screen and (max-width: 350px) {
@@ -934,4 +1124,15 @@ footer{
         font-size: 16px;
         padding: 5px;
     }
+    .row-limit-size > .main-content-acts > .content-act > figure > img{
+        width: 150px;
+    }
+    .box > img, .boxs > .figure-box > .box > a >.title-lieu{
+        width: 250px;
+    }
+    .boxs > .figure-box > .box > a >.title-lieu{
+        height: 60px;
+        font-size: 15px;
+    }
+    
 }
