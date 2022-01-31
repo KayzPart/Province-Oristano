@@ -57,7 +57,7 @@ table {
 
 /* Header */
 .row-limit-size{
-    max-width: 2000px;
+    max-width: 1600px;
     width: 100%;
 }
 .show{
@@ -70,6 +70,13 @@ table {
 .flex-around{
     display: flex;
     justify-content: space-around;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.align-center{
+    display: flex;
+    align-items: center;
 }
 header{
     background-image: url(./IMG/img-ame.png);
@@ -98,6 +105,13 @@ nav#main-nav > ul > li{
 }
 p{
     font-family: "Adamina";  
+    font-size: 20px;
+}
+h1{
+    font-size: 32px;
+}
+h2{
+    font-size: 26px;
 }
 nav#main-nav > ul > li > a{
     font-size:  24px;
@@ -126,165 +140,77 @@ nav#main-nav > ul > li:hover > a{
 }
 
 /* Accueil */
-.txt-accueil > h1{
+.row-limit-size > .txt-accueil > h1, .txt-accueil-2 > h1{
     text-align: center;
-    padding: 20px 0;
-    font-size: 32px;
     height: auto;
 }
-.txt-accueil, .cercles{
-    padding: 20px;
+.row-limit-size > .txt-accueil > h1, .txt-accueil-2 > h1{
+    padding: 45px 0;
 }
-.txt-accueil > p{
-    padding: 15px 0;
-    line-height: 20px;
+.row-limit-size > .txt-accueil-2{
+    padding-bottom: 45px;
 }
-/* Cercle chiffres */
-.cercles{
-    position: relative;
-    height: 100px;
-    display: flex;
-    align-items: center;
+/* Div Superficie - Population */
+.row-limit-size > .txt-accueil > .population-superficie > .habit-superf > figure > img{
+    width: 640px;
+    height: 320px;
+    object-fit: contain;
 }
-#cercle1, #cercle2, #cercle3{
-    position: absolute;
-    background-color: #fff;
-    -webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.6); 
-    box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.6);
-    margin: 20px;
-}
-#cercle1::before, #cercle2::before, #cercle3::before{
-    position: absolute;
-    font-size: 14px;
-}
-#cercle1::after, #cercle2::after, #cercle3::after{
-    position: absolute;
-}
-#cercle1{
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
-}
-#cercle1::before{
-    content: "87";
-    top: 17px;
-    left: 17px;
-}
-#cercle1::after{
-    content: "Communes";
-    top: 15px;
-    right: -100px;
-}
-#cercle2{
-    width: 65px;
-    height: 65px;
-    border-radius: 50px;
-    left: 30%;
-}
-#cercle2::before{
-    content: "157 707";
-    top: 27px;
-    left: 10px;
-}
-#cercle2::after{
-    content: "C’est le nombre d’habitants qu’elle compte aujourd’hui";
-    right: -390px;
-    top: 25px;
-}
-#cercle3{
-    width: 80px;
-    height: 80px;
-    border-radius: 50px;
-    left: 70%;
-    /* top: 0; */
-}
-#cercle3::before{
-    content: "2 996 km²";
-    top: 35px;
-    right: 10px;
-}
-#cercle3::after{
-    content: "Sa superficie total à l’heure actuelle";
-    right: -260px;
-    top: 30px;
+.row-limit-size > .txt-accueil > .population-superficie > .commune > p, .habit-superf > p{
+    text-align: center;
 }
 /* Div content-hisoire */
+.content-histoire, .climat{
+    background-color: rgba(255, 255, 255, 0.678);
+    box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.6);
+}
 .content-histoire{
-    position: relative;
-    left: 10%;
-    height: 300px;
+    /* height: 500px; */
     width: 800px;
     border-radius: 10px;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.6);
-
 }
 .content-histoire > h2{
-    font-size: 18px;
     padding: 10px 0;
 }
-.content-histoire > .histoire-first-cercle{
+.content-histoire > .histoire{
+    text-align: center; 
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
-.histoire-first-cercle > #cercle4, .histoire-second-cercle > #cercle5{
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    margin: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.5);
-    position: relative;
+.content-histoire > .histoire > p{
+    padding: 10px;
+    line-height: 30px;
 }
-#cercle5{
-    left: 45%;
-}
-.histoire-first-cercle > #cercle4::after{
-    content: "1848";
-    position: absolute;
-    top: 18px;
-    left: 8px;
-}
-.content-histoire > p, .histoire-second-cercle p{
-    text-align: center;
-}
-.histoire-second-cercle > #cercle5::after{
-    content: "2001";
-    position: absolute;
-    top: 18px;
-    left: 8px;
-
+.content-histoire > .histoire > .cercle{
+    font-size: 22px;
+    font-weight: bold;
+    border: thick double #32a1ce;
+    padding: 10px;
 }
 
 /* Div climat */
 .climat{
     width: 610px;
-    height: 150px;
+    height: auto;
+    padding: 25px;
     border-radius: 10px;
-    background: #fff;
-    box-shadow: -3px -4px 4px 0px rgba(0,0,0,0.42);
-    position: relative;
-    left: 55%;
-    top: -40px;
     display: flex;
     align-items: center;
     text-align: center;
+    flex-direction: column;
 }
-.climat > figure > img{
-    width: 50px;
+.row-limit-size > .txt-accueil-2 > .flex-around > .climat > figure > img{
+    width: 100px;
     height: auto;
     transform: rotate(25deg);
-    position: absolute;
-    bottom: 0;
-    right: 10px;
 }
 
 /* Maps */
 #maps {
+   padding: 0 0 45px 0;
     text-align: center;
-    padding: 5px 0;
-    
 }
 #maps > iframe{
     border-radius: 10px;
@@ -299,9 +225,9 @@ nav#main-nav > ul > li:hover > a{
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    margin: 0 auto;
     max-width: 1400px;
     width: 100%;
-    margin: 0 auto;
 }
 .figure-box{
     position: relative;
@@ -332,7 +258,6 @@ nav#main-nav > ul > li:hover > a{
 /* Footer */
 footer{
     background-color: #DBB276;
-    /* margin-top: 50px; */
 }
 /* Modal Mentions légales */
 #modal{
@@ -341,7 +266,6 @@ footer{
     bottom: 0;
     max-width: 1100px;
     width: 100%;
-    /* height: 100%; */
     z-index: 9999;
     text-align: center;
     display: none;
@@ -349,7 +273,6 @@ footer{
 #modal div{
     max-width: 1000px;
     width: 100%;
-    /* height: auto; */
     margin: 0 auto;
     background-color: #c0825ce3;
     position: absolute;
@@ -435,7 +358,6 @@ footer{
 .blocs{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     padding: 50px 0;
 }
 .row-limit-size > .bloc-content > figure > img{
@@ -463,14 +385,9 @@ footer{
 }
 
 /* Actualités */
-/* .main-content-atcs{
-    display: flex;
-    flex-wrap: wrap;
-} */
 .row-limit-size > .main-content-acts{
     display: flex;
     flex-wrap: wrap;
-    /* align-self: center; */
     padding: 20px 0;
 }
 .row-limit-size > .main-content-acts > .content-act{
@@ -496,7 +413,6 @@ footer{
 }
 .row-limit-size > .main-content-acts > .content-act > .txt-act{
     padding: 10px 10px 10px 30px;
-    /* width: 50%; */
     box-sizing: content-box;
     width: 50%;
 }
@@ -530,26 +446,8 @@ footer{
         max-width: 1200px;
         padding: 10px;
     }
-    .content-histoire{
-        position: inherit;
-    }
-}
-@media screen and (max-width: 1340px){
-    #cercle1{
-        left: 0;
-    }
-    #cercle2{
-        left: 25%;
-    }
-    #cercle3{
-        left: 70%;
-    }
-    .content-histoire{
-        margin: 0 auto;
-    }
-    .climat{
-        left: 30%;
-        top: -20px;
+    .txt-accueil-2 > .flex-around > .climat{
+        margin-top: 45px;
     }
 }
 @media screen and (max-width: 1280px){
@@ -559,18 +457,11 @@ footer{
     .figure-content{
         max-width: 1100px;
     }
+    .txt-accueil > .population-superficie > .habit-superf{
+        margin-top: 45px;
+    }
 }
 @media screen and (max-width: 1200px ){
-    #cercle1{
-        left: 0;
-    }
-    #cercle2{
-        left: 45%;
-    }
-    #cercle3{
-        bottom: -40px;
-        left: 15%;
-    }
     .row-limit-size > .bloc-content{
         height: 450px;
         width: 500px;
@@ -648,9 +539,6 @@ footer{
         max-width: 600px;
         width: 100%;
     }
-    .cercles{
-        max-width: 600px;
-    }
 }
 @media screen and (max-width: 920px){
     .row-limit-size > .main-content-acts > .content-act{
@@ -671,16 +559,6 @@ footer{
     }
 }
 @media screen and (max-width: 900px){
-    #cercle1{
-        top: 0;
-    }
-    #cercle2{
-        top: 0;
-        left: 30%;
-    }
-    #cercle3{
-        left: 5%;
-    }
     #maps > iframe {
         width: 600px;
     }
@@ -688,9 +566,6 @@ footer{
         max-width: 600px;
         width: 100%;
         top: 990px;
-    }
-    .climat{
-        left: inherit;
     }
 }
 @media screen and (max-width: 865px) {
@@ -797,27 +672,7 @@ footer{
         font-size: 2em;
         top: -32px;
     }
-    .cercles{
-        height: 200px;
-    }
-    #cercle1{
-        left: 30%;
-    }
-    #cercle2{
-        top: 30%;
-        left: 5%;
-    }
-    #cercle3{
-        left: 20%;
-        bottom: -20px;
-    }
-    .content-histoire{
-        max-width: 500px;
-        width: 100%;
-    }
-    .climat{
-        top: 5px;
-        left: 0;
+    .content-histoire, .climat{
         max-width: 500px;
         width: 100%;
     }
@@ -845,9 +700,9 @@ footer{
     }
 }
 @media screen and (max-width: 680px){
-    .content-histoire, .climat{
+    /* .content-histoire, .climat{
         margin: 0 auto;
-    }
+    } */
     .figure-content, .figure-box > a{
         max-width: 510px;
     }
@@ -874,6 +729,9 @@ footer{
     .row-limit-size > .main-content-acts > .content-act > figure > img{
         width: 450px;
     }
+    .row-limit-size > .txt-accueil > .population-superficie > .commune > figure > img, .row-limit-size > .txt-accueil > .population-superficie > .habit-superf > figure > img{
+        width: 500px;
+    }
 }
 @media screen and (max-width: 640px ) {
     #maps > iframe{
@@ -888,21 +746,15 @@ footer{
         left: 35%;
     }
 }
-@media screen and (max-width: 590px){
-    .content-histoire{
-        padding: 10px;
-        box-sizing: content-box;
-        height: 100%;
-        width: 100%;
-    }
-    .txt-accueil{
-        padding: 0;
-    }
-    .txt-accueil > h1{
+@media screen and (max-width: 595px){
+    .txt-accueil > h1 , .txt-accueil-2 > h1{
         font-size: 22px;
     }
-    .figure-content, .figure-box > a, #maps > iframe{
-        max-width: 500px;
+    .txt-accueil-2 > .flex-around > .content-histoire , .txt-accueil-2 > .flex-around > .climat ,.figure-content{
+        max-width: 450px;
+    }
+    .row-limit-size > .txt-accueil > .population-superficie > .commune > p, .habit-superf > p{
+        font-size: 18px;
     }
     #modal > div{
         top: 700px;
@@ -923,11 +775,11 @@ footer{
     }
 }
 @media screen and (max-width: 550px){
+    .txt-accueil-2 > .flex-around > .content-histoire, .txt-accueil-2 > .flex-around > .climat, .figure-content{
+        max-width: 350px;
+    }
     .content-histoire, .climat, .figure-content, .figure-box > a, #maps > iframe{
         max-width: 450px;
-    }
-    .histoire-first-cercle > #cercle4, #cercle5{
-        margin: 5px;
     }
     .box > img{
         width: 400px;
@@ -945,65 +797,19 @@ footer{
     }
 }
 @media screen and (max-width: 510px){
-    #cercle1, #cercle2, #cercle3{
-        margin: 5px;
-    }
-    #cercle1{
-        height: 30px;
-        width: 30px;
-        left: 0;
-    }
-    #cercle1::before{
-        left: 9px;
-        top: 10px;
-    }
-    #cercle1::after{
-        left: 35px;
-        top: 10px;
-    }
-    #cercle2{
-        height: 55px;
-        width: 55px;
-        left: 5px;
-    }
-    #cercle2::before{
-        left: 5px;
-        top: 23px;
-    }
-    #cercle2::after{
-        left: 60px;
-        top: 23px;
-    }
-    #cercle3{
-        width: 64px;
-        height: 64px;
-        left: 10px;
-        top: 65%;
-    }
-    #cercle3::before{
-        left: 4px;
-        top: 25px;
-        right: 0;
-    }
-    #cercle3::after{
-        left: 70px;
-        top: 25px;
-    }
     header{
         background-position: inherit;
     }
+    .row-limit-size > .txt-accueil > .population-superficie > .commune > figure > img, .row-limit-size > .txt-accueil > .population-superficie > .habit-superf > figure > img{
+        width: 400px;
+    }
+    .row-limit-size > .txt-accueil > .population-superficie > .commune > p, .habit-superf > p{
+        font-size: 16px;
+    }
 }
 @media screen and (max-width: 480px){
-    .content-histoire, .climat, .figure-content, .figure-box > a, #maps > iframe{
-        max-width: 400px;
-    }
-    .content-histoire > .histoire-first-cercle{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    .climat{
-        padding: 0 10px;
+    .content-histoire, .climat, .figure-content, .figure-box > a, #maps > iframe, .txt-accueil-2 > .flex-around > .content-histoire, .txt-accueil-2 > .flex-around > .climat, .figure-content{
+        max-width: 350px;
     }
 }
 @media screen and (max-width: 460px) {
@@ -1017,10 +823,6 @@ footer{
     .slogan::before{
         font-size: 1.5em;
         top: -23px;
-    }
-    
-    .climat > figure {
-        display: none;
     }
     .content-histoire, .climat, .figure-content, .figure-box > a, #maps > iframe{
         max-width: 350px;
@@ -1048,23 +850,8 @@ footer{
     }
 }
 @media screen and (max-width: 440px) {
-    #cercle1::after, #cercle2::after, #cercle3::after{
-        font-size: 14px;
-    }
-    #cercle3, #cercle2{
-        left: 0;
-    }
-    .cercles{
-        padding: 0;
-    }
     .txt-accueil > h1{
         font-size: 18px;
-    }
-    #maps > iframe, .figure-content, .figure-box > a{
-        width: 350px;
-    }
-    #cercle5{
-        left: 37%;
     }
     .box > img{
         width: 300px;
@@ -1081,18 +868,6 @@ footer{
     }
 }
 @media screen and (max-width: 385px){
-    #cercle1::after, #cercle2::after, #cercle3::after{
-        font-size: 12px;
-    }
-    .content-histoire, .climat{
-        max-width: 350px;
-    }
-    #maps > iframe{
-        width: 350px;
-    }
-    #cercle5{
-        left: 37%;
-    }
     .row-limit-size > .main-content-acts > .content-act > figure > img{
         width: 200px;
     }
@@ -1111,14 +886,11 @@ footer{
         font-size: 1em;
         top: -20px;
     }
-    #cercle5{
-        left: 35%;
-    }
-    #cercle1::after, #cercle2::after, #cercle3::after{
-        font-size: 11px;
-    }
-    .content-histoire, .climat, .figure-content, .figure-box > a, #maps > iframe{
+    .content-histoire, .climat, .figure-content, .figure-box > a, #maps > iframe, .txt-accueil-2 > .flex-around > .content-histoire, .txt-accueil-2 > .flex-around > .climat, .figure-content{
         max-width: 290px;
+    }
+    .row-limit-size > .txt-accueil > .population-superficie > .commune > figure > img, .row-limit-size > .txt-accueil > .population-superficie > .habit-superf > figure > img{
+        width: 250px;
     }
     .p-lieu > p {
         font-size: 16px;
